@@ -1,0 +1,102 @@
+[
+  {
+    "question": "What does DBMS stand for?",
+    "options": [
+      "Database Management System",
+      "Data Base Manipulation System",
+      "Digital Business Management System",
+      "Data Backup and Management System"
+    ],
+    "correct_answer": "Database Management System"
+  },
+  {
+    "question": "What is the key difference between DBMS and RDBMS?",
+    "options": [
+      "DBMS uses SQL, RDBMS doesn't",
+      "RDBMS stores data in tables with defined relations, DBMS doesn't necessarily",
+      "DBMS is open-source, RDBMS is proprietary",
+      "There is no significant difference"
+    ],
+    "correct_answer": "RDBMS stores data in tables with defined relations, DBMS doesn't necessarily"
+  },
+  {
+    "question": "What does SQL stand for?",
+    "options": [
+      "Structured Query Language",
+      "Simple Query Language",
+      "Standard Query Language",
+      "Statistical Query Language"
+    ],
+    "correct_answer": "Structured Query Language"
+  },
+  {
+    "question": "What is the PRIMARY KEY constraint used for?",
+    "options": [
+      "To ensure unique values in a column",
+      "To uniquely identify each row in a table",
+      "To enforce referential integrity",
+      "To create indexes"
+    ],
+    "correct_answer": "To uniquely identify each row in a table"
+  },
+  {
+    "question": "What does a FOREIGN KEY constraint ensure?",
+    "options": [
+      "Data type consistency across tables",
+      "Unique values in a column",
+      "Referential integrity between tables",
+      "Data is not NULL"
+    ],
+    "correct_answer": "Referential integrity between tables"
+  },
+  {
+    "question": "Which JOIN type retrieves all records from the left table and matching records from the right table?",
+    "options": [
+      "INNER JOIN",
+      "RIGHT JOIN",
+      "FULL JOIN",
+      "LEFT JOIN"
+    ],
+    "correct_answer": "LEFT JOIN"
+  },
+  {
+    "question": "What is the purpose of a database index?",
+    "options": [
+      "To improve query performance",
+      "To enforce data integrity",
+      "To store data",
+      "To create constraints"
+    ],
+    "correct_answer": "To improve query performance"
+  },
+  {
+    "question": "What is the difference between DELETE and TRUNCATE statements?",
+    "options": [
+      "DELETE is faster, TRUNCATE is slower",
+      "TRUNCATE removes all rows and frees space, DELETE removes rows based on conditions and doesn't free space",
+      "DELETE affects indexes, TRUNCATE doesn't",
+      "There's no significant difference"
+    ],
+    "correct_answer": "TRUNCATE removes all rows and frees space, DELETE removes rows based on conditions and doesn't free space"
+  },
+  {
+    "question": "What is OLTP?",
+    "options": [
+      "Online Transaction Processing",
+      "Offline Transaction Processing",
+      "Online Table Processing",
+      "Offline Table Processing"
+    ],
+    "correct_answer": "Online Transaction Processing"
+  },
+  {
+    "question": "What command is used to create a database in PostgreSQL?",
+    "options": [
+      "CREATEDB",
+      "CREATE DATABASE",
+      "MAKEDB",
+      "NEWDB"
+    ],
+    "correct_answer": "CREATEDB"
+  }
+]
