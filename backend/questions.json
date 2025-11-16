@@ -1,102 +1,102 @@
 [
   {
-    "question": "Which network topology requires all nodes to be connected to a single central device, and if that central device is damaged, the whole network fails?",
+    "question": "Why is Java not considered a pure object-oriented language?",
     "options": [
-      "Ring",
-      "Bus",
-      "Star",
-      "Mesh"
+      "It supports multiple inheritance through interfaces.",
+      "It allows methods to be defined outside of classes.",
+      "It supports primitive data types.",
+      "It does not enforce data encapsulation by default."
     ],
-    "correct_answer": "Star"
+    "correct_answer": "It supports primitive data types."
   },
   {
-    "question": "In the context of networking, what is the range limit for a PAN (Personal Area Network)?",
+    "question": "What is the primary difference between the `equals()` method and the equality operator (`==`) in Java when comparing objects?",
     "options": [
-      "Up to 100 meters",
-      "Up to 1 kilometer",
-      "Up to 10 meters",
-      "Up to the boundaries of a metropolitan city"
+      "The `equals()` method compares memory addresses, while `==` compares content.",
+      "The `equals()` method is only used for String objects.",
+      "The `equals()` method compares content (if overridden), while `==` compares memory addresses/references.",
+      "The `equals()` method is mandatory for primitive type comparisons."
     ],
-    "correct_answer": "Up to 10 meters"
+    "correct_answer": "The `equals()` method compares content (if overridden), while `==` compares memory addresses/references."
   },
   {
-    "question": "Which layer of the OSI reference model is responsible for converting the data into data frames and attaching the physical address to these frames?",
+    "question": "Which component is primarily responsible for compiling Java source code into platform-independent bytecode?",
     "options": [
-      "Physical Layer",
-      "DataLink Layer",
-      "Network Layer",
-      "Transport Layer"
+      "JRE",
+      "JVM",
+      "JIT compiler",
+      "javac compiler"
     ],
-    "correct_answer": "DataLink Layer"
+    "correct_answer": "javac compiler"
   },
   {
-    "question": "What is the primary function of the Presentation Layer in the OSI model?",
+    "question": "Which Java keyword is used to define a block of code that is guaranteed to execute, regardless of whether an exception is thrown or caught, unless `System.exit(0)` is called?",
     "options": [
-      "Routing packets between networks",
-      "Transmission of raw bit streams",
-      "Beginning, maintaining, and ending communication sessions",
-      "Translating data from one format to another format (Translation layer)"
+      "final",
+      "finally",
+      "finalize",
+      "transient"
     ],
-    "correct_answer": "Translating data from one format to another format (Translation layer)"
+    "correct_answer": "finally"
   },
   {
-    "question": "Relative to UDP, how is TCP described in terms of speed according to the provided content?",
+    "question": "Among String, StringBuffer, and StringBuilder, which class is mutable and is suitable for use in a single-threaded environment for efficiency?",
     "options": [
-      "Significantly faster",
-      "Comparatively slower",
-      "Speed is irrelevant",
-      "Always connectionless"
+      "String",
+      "StringBuffer",
+      "StringBuilder",
+      "CharacterArray"
     ],
-    "correct_answer": "Comparatively slower"
+    "correct_answer": "StringBuilder"
   },
   {
-    "question": "Which network protocol is used to auto-configure devices on IP networks by assigning IPs, subnet masks, and other network configurations?",
+    "question": "Can static methods be overridden in Java?",
     "options": [
-      "FTP (File Transfer Protocol)",
-      "DHCP (Dynamic Host Configuration Protocol)",
-      "ARP (Address Resolution Protocol)",
-      "ICMP (Internet Control Message Protocol)"
+      "Yes, but only if they are declared public.",
+      "No, because static methods are looked up statically at compile time (method hiding occurs instead).",
+      "Yes, using the @Override annotation.",
+      "Only if the subclass is in a different package."
     ],
-    "correct_answer": "DHCP (Dynamic Host Configuration Protocol)"
+    "correct_answer": "No, because static methods are looked up statically at compile time (method hiding occurs instead)."
   },
   {
-    "question": "What is the default port used by HTTPS (HyperText Transfer Protocol Secure)?",
+    "question": "What happens if the `static` modifier is not included in the `main` method signature in a Java program?",
     "options": [
-      "25",
-      "80",
-      "443",
-      "67"
+      "It causes a compile-time error immediately.",
+      "The program compiles, but throws a `NoSuchMethodError` at runtime.",
+      "The program runs successfully, but the main method must be called explicitly.",
+      "The method is treated as an instance method and can only be called on an object."
     ],
-    "correct_answer": "443"
+    "correct_answer": "The program compiles, but throws a `NoSuchMethodError` at runtime."
   },
   {
-    "question": "In the context of the TCP/IP Reference Model, which layer's functionality is described as almost the same as the OSI transport layer, enabling peer entities on the network to carry on a conversation?",
+    "question": "Which keyword must be used to prevent a variable or attribute of a class from being serialized?",
     "options": [
-      "Link Layer",
-      "Internet Layer",
-      "Transport Layer",
-      "Application Layer"
+      "final",
+      "volatile",
+      "synchronized",
+      "transient"
     ],
-    "correct_answer": "Transport Layer"
+    "correct_answer": "transient"
   },
   {
-    "question": "A router sends data between two similar networks. What device sends data between two dissimilar networks?",
+    "question": "Which part of memory (Stack or Heap) is primarily cleaned during the garbage collection process?",
     "options": [
-      "Hub",
-      "Switch",
-      "Gateway",
-      "NIC"
+      "Stack",
+      "Cache",
+      "Registers",
+      "Heap"
     ],
-    "correct_answer": "Gateway"
+    "correct_answer": "Heap"
   },
   {
-    "question": "What is the primary function of the Address Resolution Protocol (ARP)?",
+    "question": "Which Object-Oriented concept involves hiding the data attributes and their behaviors within a single unit for security and modularity?",
     "options": [
-      "To resolve domain names to IP addresses",
-      "To convert a logical address (IP address) to a device's physical address (MAC address)",
-      "To check the connectivity between network devices",
-      "To manage the initiation and termination of the link between source and destination"
+      "Inheritance",
+      "Polymorphism",
+      "Encapsulation",
+      "Abstraction"
     ],
-    "correct_answer": "To convert a logical address (IP address) to a device's physical address (MAC address)"
+    "correct_answer": "Encapsulation"
   }
 ]
