@@ -368,9 +368,6 @@ DELETE /api/quizzes/{quiz_id}
 ### 📤 Upload Page
 ![Upload Page](frontend/src/assets/images/uploadpageimage.png)
 
-### ✅ Upload Confirmation
-![Upload Confirmation Image](frontend/src/assets/images/uploadimage.png)
-
 ### 📝 Quiz Page
 ![Quiz Page](frontend/src/assets/images/quizpageimage.png)
 
@@ -378,7 +375,7 @@ DELETE /api/quizzes/{quiz_id}
 ![Results Page](frontend/src/assets/images/resultspageimage.png)
 
 ### 📋 Admin Page
-![Admin Page](ffrontend/src/assets/images/adminpage.png)
+![Admin Page](frontend/src/assets/images/adminpage.png)
 
 
 ## 👨‍💻 Author
