@@ -140,7 +140,7 @@ DATABASE_URL=sqlite:///./quiz.db
 
 #### 5️⃣ Initialize database
 ```bash
-python -c "from services import init_db; init_db(); print('✅ Database initialized successfully')"
+python -c "from services import init_db; init_db(); print(' Database initialized successfully')"
 ```
 
 #### 6️⃣ Run FastAPI server
@@ -361,9 +361,6 @@ DELETE /api/quizzes/{quiz_id}
 ## 🖼️ Screenshots
 ### 🏠 Home Page
 ![Home Page](frontend/src/assets/images/homepageimage.png)
-
-### 📑 Info Page
-![Info Page](frontend/src/assets/images/detailpage.png)
 
 ### 📤 Upload Page
 ![Upload Page](frontend/src/assets/images/uploadpageimage.png)
