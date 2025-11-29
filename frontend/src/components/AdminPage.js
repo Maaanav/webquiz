@@ -27,7 +27,6 @@ const AdminPage = () => {
   const navigate = useNavigate();
   const API_BASE = "http://localhost:5001/api";
 
-  // fetch quizzes (used for mapping quiz_id -> title)
   const fetchQuizzes = async (qterm = "") => {
     setIsLoading(true);
     setError(null);
@@ -45,7 +44,6 @@ const AdminPage = () => {
     }
   };
 
-  // fetch all results (for admin table)
   const fetchResults = async () => {
     setIsLoadingResults(true);
     setError(null);
@@ -63,7 +61,6 @@ const AdminPage = () => {
   useEffect(() => {
     fetchQuizzes(debouncedSearch);
     fetchResults();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [debouncedSearch]);
 
   const openQuiz = (quizId) => {
@@ -102,7 +99,6 @@ const AdminPage = () => {
     return map;
   }, [quizzes]);
 
-  // filter results by search (search matches username, email, quiz title, or ids)
   const filteredResults = useMemo(() => {
     if (!search) return results;
     const s = search.toLowerCase();
@@ -205,7 +201,6 @@ const AdminPage = () => {
                             Open Quiz
                           </button>
 
-                          {/* keep quiz delete option (deletes the whole quiz) */}
                           <button
                             className="delete-btn"
                             onClick={() => onDeleteClick(r.quiz_id, title)}
