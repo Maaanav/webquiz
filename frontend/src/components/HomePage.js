@@ -5,7 +5,6 @@ import "../styles/HomePage.css";
 import fileUploadBackground from "../assets/images/fileuploadbg.jpg";
 import quizinfoBackground from "../assets/images/infoimage.jpg";
 import backgroundVideo from "../assets/videos/quizbgvideo.mp4";
-// NOTE: Do NOT import Navbar here — App.js renders it globally
 
 function HomePage() {
   const navigate = useNavigate();
@@ -14,7 +13,6 @@ function HomePage() {
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
-    // If URL hash contains #upload or #info, scroll to corresponding id when Home mounts
     if (location.hash === "#upload") {
       setTimeout(() => {
         const el = document.getElementById("file-upload-section");
@@ -43,7 +41,7 @@ function HomePage() {
     formData.append("file", file);
 
     try {
-      const response = await axios.post("http://localhost:5001/api/upload", formData, {
+      const response = await axios.post("import.meta.env.VITE_API_BASE_URL", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       console.log("Upload Response:", response.data);
@@ -64,7 +62,6 @@ function HomePage() {
 
   return (
     <div className="home-container">
-      {/* DO NOT render <Navbar /> here — App.js handles it */}
 
       <div className="video-container">
         <video className="background-video" autoPlay muted loop>
@@ -116,7 +113,6 @@ function HomePage() {
         </div>
       </div>
 
-      {/* Footer unchanged */}
       <footer className="footer">
         <div className="footer-content">
           <div className="footer-left">
