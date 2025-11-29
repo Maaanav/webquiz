@@ -14,7 +14,7 @@ export default function ResultPage() {
 
     async function loadFromBackend() {
       try {
-        const res = await fetch("http://localhost:5001/api/results/latest");
+        const res = await fetch("import.meta.env.VITE_API_BASE_URL/results/latest");
         if (!res.ok) throw new Error(`no backend result (${res.status})`);
         const data = await res.json();
         if (mounted) { setResult(data); setLoading(false); }
