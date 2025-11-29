@@ -23,7 +23,7 @@ function QuizPage() {
     const fetchQuestions = async () => {
       setIsLoading(true);
       try {
-        const url = quizId ? `http://localhost:5001/api/questions?quiz_id=${quizId}` : 'http://localhost:5001/api/questions';
+        const url = quizId ? `import.meta.env.VITE_API_BASE_URL/questions?quiz_id=${quizId}` : 'import.meta.env.VITE_API_BASE_URL/questions';
         const response = await axios.get(url);
         if (response.data.message && (response.data.questions && response.data.questions.length > 0)) {
           setQuestions(response.data.questions);
@@ -54,7 +54,6 @@ function QuizPage() {
     if (e) e.preventDefault();
     try {
       const payload = { answers };
-      // attach current user if available
       const rawUser = localStorage.getItem('quiz_current_user');
       if (rawUser) {
         try { payload.user = JSON.parse(rawUser); } catch (err) { /* ignore */ }
@@ -63,13 +62,10 @@ function QuizPage() {
       if (quizId) payload.quiz_id = Number(quizId);
 
       setIsLoading(true);
-      // POST to backend submit (note /api prefix)
-      const response = await axios.post('http://localhost:5001/api/submit', payload);
+      const response = await axios.post('import.meta.env.VITE_API_BASE_URL/submit', payload);
 
-      // backend sends { score, total, detailed, saved_result } or saved_result included
       const resultObj = response.data;
 
-      // Save full server response to localStorage as fallback
       try {
         localStorage.setItem('lastQuizResult', JSON.stringify(resultObj));
       } catch (err) {
