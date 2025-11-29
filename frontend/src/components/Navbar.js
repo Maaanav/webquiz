@@ -3,13 +3,6 @@ import { useNavigate, useLocation } from "react-router-dom";
 import "../styles/Navbar.css";
 import { AuthContext } from "../context/AuthContext";
 
-/**
- * Single Navbar for the app.
- * - "Quiz" scrolls to #file-upload-section on Home
- * - "Info" scrolls to #info-section on Home
- * - If you are not on Home, it navigates to Home then scrolls
- * - Shows Login/Register or user + logout + Admin
- */
 
 export default function Navbar() {
   const navigate = useNavigate();
@@ -25,21 +18,17 @@ export default function Navbar() {
 
   function handleNavigate(path) {
     if (location.pathname !== path) navigate(path);
-    // No scroll needed for plain Home navigation
   }
 
   function handleScrollTo(path, elementId) {
     if (location.pathname === path) {
-      // already on home — try to scroll immediately
       const el = document.getElementById(elementId);
       if (el) {
         el.scrollIntoView({ behavior: "smooth", block: "center" });
         return;
       }
     }
-    // If not on home (or element not found), navigate to home then scroll after mount
     navigate(path);
-    // use a short retry loop to handle slower mounts
     const maxTries = 12;
     let tries = 0;
     const t = setInterval(() => {
