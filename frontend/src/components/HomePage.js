@@ -41,7 +41,7 @@ function HomePage() {
     formData.append("file", file);
 
     try {
-      const response = await axios.post("import.meta.env.VITE_API_BASE_URL", formData, {
+      const response = await axios.post("import.meta.env.VITE_API_BASE_URL/upload", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
       console.log("Upload Response:", response.data);
